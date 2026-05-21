@@ -24,6 +24,7 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
+    background-color: rgb(27, 27, 27);
 }
 .ProjectTitle{
     font-family: Archivo-Bold;
@@ -73,5 +74,6 @@ body{
 }
     .header{
         font-size: 50px;
+        margin-bottom: 0;
     }
 }
