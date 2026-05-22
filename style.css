@@ -5,11 +5,17 @@ body{
     background-color: black;
     flex-direction: column;
 }
+.addPageBody{
+    background-color: black;
+}
 .header{
     color: white;
-    font-family: Archivo-Bold;
+    font-family: Array-SemiboldWide;
     font-size: 70px;
     margin-top: 20px;
+}
+.Planning{
+    color: rgb(102, 255, 102);
 }
 #ProjectOverview{
     display: flex;
@@ -20,18 +26,28 @@ body{
     width: 320px;
     height: 200px;
     border: white 5px solid;
+    border-radius: 3px;
     margin: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
     background-color: rgb(27, 27, 27);
+    transition: transform 0.2s ease;
 }
 .ProjectTitle{
     font-family: Archivo-Bold;
-    font-size: 25px;
-    color: white;
+    font-size: 30px;
+    color: #E06C75;
     margin-left: 10px;
     margin-top: 0;
+    margin-bottom: 5px;
+}
+.let{
+    color: #C678DD;
+}
+.equal{
+    color: #56B6C2;
 }
 .StatusDot{
     margin: 10px;
@@ -44,13 +60,15 @@ body{
     top: 0;
     right: 0
 }
-.ToDoOverview{
-    color: white;
+.projectDescription{
+    color: #98C379;
     font-family: Archivo-Bold;
     margin: 0;
+    width: 250px;
+    margin-left: 10px;
 }
 .dueDate{
-    color: white;
+    color: #7F848E;
     font-family: Archivo-Bold;
     position: absolute;
     bottom: 0;
@@ -58,12 +76,26 @@ body{
     margin: 10px;
     margin-bottom: 0;
 }
+.addProjectCard{
+    width: 500px;
+    height: 600px;
+    border: white 5px solid;
+    border-radius: 3px;
+    background-color: rgb(27, 27, 27)
+}
 @font-face {
   font-family: 'Archivo-Bold';
   src: url('Fonts/WEB/fonts/Archivo-Bold.woff2') format('woff2'),
        url('Fonts/WEB/fonts/Archivo-Bold.woff') format('woff'),
        url('Fonts/WEB/fonts/Archivo-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Array-SemiboldWide';
+  src: url('Fonts/WEB/fonts/Array-SemiboldWide.woff2') format('woff2');
+  font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
@@ -76,4 +108,7 @@ body{
         font-size: 50px;
         margin-bottom: 0;
     }
+}
+.Projects:hover{
+    transform: scale(1.1);
 }
