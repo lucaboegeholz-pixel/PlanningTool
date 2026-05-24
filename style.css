@@ -10,7 +10,13 @@ body{
 }
 .header{
     color: white;
-    font-family: Array-SemiboldWide;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
+    font-size: 70px;
+    margin-top: 20px;
+}
+.closingBracket{
+    color: white;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
     font-size: 70px;
     margin-top: 20px;
 }
@@ -19,7 +25,11 @@ body{
 }
 #ProjectOverview{
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1800px;
+    width: 100%;
     
 }
 .Projects{
@@ -43,8 +53,14 @@ body{
     margin-top: 0;
     margin-bottom: 5px;
 }
-.let{
+.keyword{
     color: #C678DD;
+}
+.functionName{
+    color: #E06C75;
+}
+.brackets{
+    color: #56B6C2
 }
 .equal{
     color: #56B6C2;
@@ -135,6 +151,7 @@ body{
     }
     .ProjectTitle{
         font-size: 25px;
+        margin-bottom: 10px;
     }
 }
 .Projects:hover{
