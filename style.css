@@ -123,6 +123,22 @@ body{
     outline: none;
     font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
     font-size: 30px;
+    padding: 10px;
+}
+.addButton{
+    border: white 5px solid;
+    border-radius: 3px;
+    position: absolute;
+    right: 0;
+    bottom: 0;    
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    background-color: rgb(27, 27, 27);
+    margin: 20px;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;;
 }
 @font-face {
   font-family: 'Archivo-Bold';
@@ -155,5 +171,9 @@ body{
     }
 }
 .Projects:hover{
-    transform: scale(1.1);
+    transform: translateY(-10px) scale(1.1);
+    border-color: #56B6C2;
+}
+.addButton:hover{
+    transform: scale(1.1)
 }
