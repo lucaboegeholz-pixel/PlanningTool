@@ -1,9 +1,10 @@
 body{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background-color: black;
     flex-direction: column;
+    padding-left: 5%;
 }
 .addPageBody{
     background-color: black;
@@ -19,6 +20,7 @@ body{
     font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
     font-size: 70px;
     margin-top: 20px;
+    margin-bottom: 0;
 }
 .Planning{
     color: rgb(102, 255, 102);
@@ -29,14 +31,14 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1800px;
-    width: 100%;
-    
+    width: 100%;  
 }
 .Projects{
     width: 320px;
     height: 200px;
     border: white 5px solid;
     border-radius: 3px;
+    margin-left: 5%;
     margin: 20px;
     padding: 10px;
     display: flex;
@@ -98,47 +100,74 @@ body{
 .addProjectCard{
     display: flex;
     flex-direction: column;
-    width: 500px;
-    height: 600px;
+    justify-content: center;
+    width: 600px;
+    height: auto;
+    padding: 40px;
     border: white 5px solid;
     border-radius: 3px;
-    background-color: rgb(27, 27, 27)
+    background-color: rgb(27, 27, 27);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .label{
     font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
     color: #E06C75;
-    margin: 20px;
-    margin-left: 50px;
-    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 .input{
-    border-radius: 15px;
-    height: 50px;
-    width: 350px;
-    background-color: black;
-    color:  #98C379;
-    margin-left: 50px;
+    border: #4B5263 2px solid;
+    border-radius: 3px;
+    height: 55px;
+    width: calc(100% - 70px);
+    background-color: #1e1e1e;
+    color: #98C379;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     outline: none;
     font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
-    font-size: 30px;
-    padding: 10px;
+    font-size: 22px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .addButton{
-    border: white 5px solid;
-    border-radius: 3px;
-    position: absolute;
-    right: 0;
-    bottom: 0;    
-    color: white;
-    font-size: 40px;
+    color: #7F848E;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;;
+}
+.returnButton{
+    color: #7F848E;
+    font-size: 30px;
     text-decoration: none;
     background-color: rgb(27, 27, 27);
     margin: 20px;
     padding: 10px;
     transition: transform 0.2s ease;
     font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;;
+}
+.mainpart{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.functionBar{
+    width: 100%;
+    background-color: rgb(27, 27, 27);;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    margin: 0;
+    border-top: #4B5263 2px solid;
 }
 @font-face {
   font-family: 'Archivo-Bold';
@@ -173,7 +202,39 @@ body{
 .Projects:hover{
     transform: translateY(-10px) scale(1.1);
     border-color: #56B6C2;
+    cursor: pointer;
 }
 .addButton:hover{
-    transform: scale(1.1)
+    transform: translateY(-5px) scale(1.05);
+    border-color:  #C678DD;
+}
+.returnButton:hover{
+    transform: translateY(-5px) scale(1.05);
+    border-color: #E06C75;
+    color: #E06C75
+}
+.addButton:hover .functionHover{
+    color: #C678DD;
+}
+.addButton:hover .functionNameHover{
+    color:  #E06C75;
+}
+.addButton:hover .bracketHover{
+    color:  #56B6C2;
+}
+.input:focus{
+    border-color: #56B6C2;
+    box-shadow: 0 0 10px rgba(86, 182, 194, 0.3);
+    background-color: black;
+}
+.input::placeholder{
+    color: #5c6370;
+    font-style: italic;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    background-color: #56B6C2;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
